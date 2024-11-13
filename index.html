@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devanshi Shah's Portfolio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Poppins Font -->
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Basic Reset and Body Styling */
         * {
@@ -14,74 +15,110 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333;
-            padding: 20px;
+            background-color: #fafafa;
+            color: #444;
+            padding: 40px;
+            overflow-x: hidden;
         }
 
         /* Header Styling */
         header {
             text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(120deg, #0073e6, #005bb5);
+            padding: 60px 20px;
+            background: linear-gradient(120deg, #6a11cb, #2575fc);
             color: #fff;
-            border-radius: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
         }
 
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 3em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 1.5px;
         }
 
-        /* Description Box Styling */
-        .description-box {
-            background-color: #ffffff;
-            color: #333;
-            padding: 20px;
-            max-width: 700px;
-            margin: 20px auto;
+        /* About Me Section */
+        .about-me {
+            background-color: #fff;
+            padding: 30px;
+            max-width: 800px;
+            margin: 40px auto;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-me h2 {
+            font-size: 2em;
+            font-weight: 600;
+            color: #6a11cb;
+            margin-bottom: 20px;
+        }
+
+        .description-box {
+            background-color: #fff;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1.1em;
+            line-height: 1.8;
         }
 
         /* Main Content Styling */
         main {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 1000px;
+            margin: 40px auto;
         }
 
         .project {
             background-color: #fff;
-            padding: 20px;
+            padding: 30px;
             margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .project h2 {
-            color: #0073e6;
-            margin-bottom: 10px;
+            color: #6a11cb;
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .project h3 {
-            margin-top: 20px;
+            font-size: 1.2em;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #444;
         }
 
         .project p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #666;
         }
 
         ul {
-            list-style-type: disc;
+            list-style-type: square;
             padding-left: 20px;
+            margin-bottom: 20px;
         }
 
         a {
-            color: #0073e6;
+            color: #2575fc;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
         }
 
         a:hover {
@@ -91,27 +128,29 @@
         /* Button Styling */
         a.button {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #0073e6;
+            padding: 12px 24px;
+            background-color: #6a11cb;
             color: #fff;
             border-radius: 5px;
             text-align: center;
-            margin-top: 10px;
-            transition: background-color 0.3s ease;
+            margin-top: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         a.button:hover {
-            background-color: #005bb5;
+            background-color: #2575fc;
+            transform: scale(1.05);
         }
 
         /* Footer Styling */
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #0073e6;
+            padding: 30px;
+            background-color: #6a11cb;
             color: #fff;
-            margin-top: 40px;
+            margin-top: 60px;
             border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -120,9 +159,12 @@
         <h1>Devanshi Shah's Portfolio</h1>
     </header>
 
-    <!-- Description Box -->
-    <div class="description-box">
-        <p>I am a junior studying Political Science and Statistics at the University of Michigan, Ann Arbor. I am passionate about using computational social science techniques to deepen my understanding of areas within contentious politics, particularly state repression, conflict, and political violence. Here are some of the research projects I’ve worked on:</p>
+    <!-- About Me Section -->
+    <div class="about-me">
+        <h2>About Me</h2>
+        <div class="description-box">
+            <p>I am a junior studying Political Science and Statistics at the University of Michigan, Ann Arbor. I am passionate about using computational social science techniques to deepen my understanding of areas within contentious politics, particularly state repression, conflict, and political violence. Here are some of the research projects I’ve worked on:</p>
+        </div>
     </div>
 
     <main>
@@ -135,7 +177,7 @@
                 <li><a href="#" target="_blank">Version 1: Autocratic Neighborhoods</a></li>
                 <li><a href="#" target="_blank">Version 2: Mixed-Regime Neighborhoods</a></li>
             </ul>
-            <h3>Paper: The Utility of Agent Based Modelling in Identifying Neighborhoods Effects of Democratization in Heavily Autocratic and Mixed Regime Regions</h3>
+            <h3>Paper: The Utility of Agent-Based Modelling in Identifying Neighborhood Effects of Democratization in Heavily Autocratic and Mixed Regime Regions</h3>
             <a href="#" class="button" target="_blank">Download the PDF</a>
         </section>
 
@@ -180,13 +222,4 @@
                 <li><a href="#" target="_blank">Geospatial Model with TMap</a></li>
             </ul>
             <h3>Report: Geospatial Analysis of Crime Statistics in Detroit, MI Areas</h3>
-            <a href="#" class="button" target="_blank">Download the PDF</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>Made with ❤️ using GitHub Pages</p>
-    </footer>
-</body>
-</html>
-
+            <a href="#" class="button" target="_blank">Download the PDF</a
